@@ -1,0 +1,95 @@
+:root {
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.animate_review {
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+.animate_chef {
+  animation-duration: 1s;
+  animation-name: slideleft;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-delay: 0.2s;
+}
+.animate_food {
+  transform-origin: 100px -400px;
+  animation-duration: 5s;
+  animation-name: rotatein;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: 0;
+  object-fit: contain;
+}
+
+@keyframes rotatein {
+  from {
+    transform: rotate(-60deg);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  60% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  90% {
+    transform: rotate(90deg);
+    opacity: 1;
+  }
+  
+  to {
+    transform: rotate(120deg);
+    opacity: 0;
+  }
+}
+@keyframes slidein {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideleft {
+  from {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
