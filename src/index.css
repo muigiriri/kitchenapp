@@ -93,3 +93,9 @@ button:focus-visible {
   }
 }
 
+.current_page .active {
+  background-color: rgb(203 213 225);
+}
+.width_slider {
+  width: calc(20% - 24px);
+}
